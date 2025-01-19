@@ -39,7 +39,7 @@ async function placeBets() {
       const userContract = contract.connect(userWallet);
 
       await userContract.makeTrade(
-        { poolId: ethers.utils.formatBytes32String('POOL_ID'), upOrDown: true },
+        { poolId: ethers.utils.formatBytes32String('0x123a'), upOrDown: true },
         { value: ethers.utils.parseEther('0.1') }
       );
       console.log(`User ${user.address} placed an UP bet.`);
@@ -52,7 +52,7 @@ async function placeBets() {
       const userContract = contract.connect(userWallet);
 
       await userContract.makeTrade(
-        { poolId: ethers.utils.formatBytes32String('POOL_ID'), upOrDown: false },
+        { poolId: ethers.utils.formatBytes32String('0x123a'), upOrDown: false },
         { value: ethers.utils.parseEther('0.1') }
       );
       console.log(`User ${user.address} placed a DOWN bet.`);
